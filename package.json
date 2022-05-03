@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm-run-all migrate:deploy build:app",
+    "build:app": "next build",
+    "migrate:deploy": "prisma migrate deploy",
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
