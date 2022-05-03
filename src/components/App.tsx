@@ -10,13 +10,13 @@ type Props = {
 
 export const App: React.FC<Props> = ({ children }) => {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"}}>
       <CssBaseline />
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar />
+      <AppBar />
+      <Box sx={{ flexShrink: 0 }}>
+        <Drawer />
       </Box>
-      <Drawer />
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, marginTop: "64px", padding: "20px"}}>
         {children}
       </Box>
     </Box>
